@@ -6,7 +6,7 @@ function solution(k, tangerine) {
   const obj = {};
 
   tangerine.forEach((item) => {
-    obj[item] == undefined ? (obj[item] = 1) : (obj[item] += 1);
+    obj[item] = (obj[item] ?? 0) + 1;
   });
 
   const arr = Object.values(obj).sort((a, b) => b - a);
